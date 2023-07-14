@@ -10,4 +10,5 @@ Currently I don't have anyway to contact me directly, but the best way to recive
 
 ## Future Updates 
 - Add Framework Support for (ESX, QBCore, and ND_Core)
+  
 *If you add these supports before me please create a pull request for the repo*
