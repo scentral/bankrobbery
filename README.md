@@ -1,7 +1,7 @@
 # Bank Robbery
 This is a **standalone** resource meaning it is only intended for RP purposes and currently does not support any frameworks.
 
-[Preview](https://www.youtube.com/@notscentral)
+[Preview]([https://www.youtube.com/@notscentral](https://www.youtube.com/watch?v=5wvQUHozeH0))
 
 ## Installation
 - Drag `bankrobbery` into your resource folder and start it in `server.cfg`
