@@ -12,6 +12,16 @@ $(function() {
   $numberMinigame.hide();
   $numberMinigameNumbers.hide();
   $guessthebox.hide();
+
+  function display(bool) {
+    if (bool) {
+      $container.show();
+    } else {
+      $container.hide();
+    }
+}
+
+display(false)
       
   // Function to scramble the numberminigame-numbers-number
   function scrambleNumbers() {
@@ -153,7 +163,7 @@ $(function() {
     if (item.type === "ui") {
       if (item.status) {
         $logo.show();
-        $container.fadeIn();
+        display(true)
 
         setTimeout(function() {
           $logo.fadeOut('slow', function() {
@@ -165,12 +175,12 @@ $(function() {
           });
         }, 3000);
       } else {
-        $container.fadeOut();
+        display(false)
       }
     }
 
     if (item.type === "close") {
-      $container.fadeOut();
+      display(false)
     }
   });
 });
