@@ -1,6 +1,5 @@
 RegisterNetEvent("bank-robbery:attemptRobbery")
 AddEventHandler("bank-robbery:attemptRobbery", function(bank, street) 
-    TriggerClientEvent("bank-robbery:attemptRobbery", -1, bank)
     Citizen.Wait(5000)
     if Config.Alert.enable then
         if math.random(0, 100) < 1 then
@@ -9,4 +8,7 @@ AddEventHandler("bank-robbery:attemptRobbery", function(bank, street)
             TriggerClientEvent('chatMessage', -1, Config.Alert.prefix, {255, 0, 0}, 'A silent alarm has been triggered at ' .. street .. ' ' .. Config.banks[bank].bank .. '')
         end
     end
+
+    -- Hude the help text from all players
+    TriggerClientEvent("bank-robbery:hideHelpText", -1)
 end)
