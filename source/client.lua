@@ -1,5 +1,5 @@
 AddEventHandler("bank-robbery:attemptRobbery")
-RegisterNetEvent('bank-robbery:attemptRobbery', function(bank) 
+RegisterNetEvent('bank-robbery:attemptRobbery', function() 
     DisplayUI(true)
     startAnim()
 end)
@@ -8,6 +8,11 @@ RegisterNetEvent("bank-robbery:enterVault")
 AddEventHandler("bank-robbery:enterVault", function() 
     local player = PlayerPedId()
     SetEntityCoords(player, 1174.69, 2711.69, 38.07)
+end)
+
+RegisterNetEvent("bank-robbery:hideHelpText")
+AddEventHandler("bank-robbery:hideHelpText", function() 
+    HideHelpText()
 end)
 
 Citizen.CreateThread(function() 
@@ -23,8 +28,8 @@ Citizen.CreateThread(function()
                     if IsControlJustPressed(0, 51) then
                         local street = GetStreetNameAtCoord(v.coords.x, v.coords.y, v.coords.z)
                         TriggerServerEvent("bank-robbery:attemptRobbery", k, GetStreetNameFromHashKey(street))
+                        TriggerEvent("bank-robbery:attemptRobbery")
                         v.isRobbable = false
-                        HideHelpText()
                     end
                 end
             end 
