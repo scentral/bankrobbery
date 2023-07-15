@@ -1,5 +1,5 @@
 fx_version 'cerulean'
-name 'AOP to Ts3'
+name 'bankrobbery'
 author 'Scentral (860097417144041472)'
 game 'gta5'
 
