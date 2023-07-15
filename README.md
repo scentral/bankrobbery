@@ -10,7 +10,7 @@ This is a **standalone** resource meaning it is only intended for RP purposes an
 - I recommended turning on fix ui lag and ui resoultion in the fivem launcher to address any issues with the UI 
 
 ## Support
-Currently I don't have anyway to contact me directly, but the best way to recive support is here on github, the fivem forums, or any FiveM discord that offers scripting support.
+Currently I don't have anyway to contact me directly, but the best way to recive support is here on github, the fivem forums, or my discord for a longer wait.
 
 ## Future Updates 
 - Add Framework Support for (ESX, QBCore, and ND_Core)
