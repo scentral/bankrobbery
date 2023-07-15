@@ -1,0 +1,91 @@
+body {
+    color: #ffffff;
+    font-family: "Arial", sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#container {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+#keypad {
+    background-color: #2a3446;
+    margin: 0 auto;
+    margin-top: 12em;
+    border-radius: 2em;
+    width: 90em;
+    height: 50em;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10em;
+}
+
+#loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5em;
+    font-size: 5em;
+}
+
+#numberminigame {
+    display: none;
+    position: absolute;
+    top: 13em;
+    left: 50em;
+    width: 40%;
+}
+
+#numberminigame-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.numberminigame-numbers-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3em;
+    height: 3em;
+    border-radius: 1em;
+    margin: 1em;
+    background-color: #5e7194;
+    font-size: 3em;
+    cursor: pointer;
+}
+
+#guesstheboxs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.guesstheboxs-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5e7194;
+    width: 3em;
+    height: 3em;
+    border-radius: 0.5em;
+    margin: 1em;
+    margin-top: -1em;
+    cursor: pointer;
+    font-size: 5em;
+}
