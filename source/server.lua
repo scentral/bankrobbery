@@ -12,3 +12,5 @@ AddEventHandler("bank-robbery:attemptRobbery", function(bank, street)
     -- Hude the help text from all players
     TriggerClientEvent("bank-robbery:hideHelpText", -1)
 end)
+
+print('Bank Robbery by scentral')
