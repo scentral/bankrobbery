@@ -89,3 +89,33 @@ body {
     cursor: pointer;
     font-size: 5em;
 }
+
+#install-countdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin-top: -28em;
+    margin-left: 10em;
+}
+
+#install-countdown-text {
+    font-size: 5em;
+    margin-bottom: 1em;
+}
+
+#install-countdown-bar {
+    width: 100%;
+    height: 1.5em;
+    background-color: #ffffff;
+    border-radius: 0.5em;
+}
+
+#install-countdown-bar-progress {
+    width: 0%;
+    height: 100%;
+    background-color: #5e7194;
+    border-radius: 0.5em;
+}
