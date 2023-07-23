@@ -7,11 +7,13 @@ $(function() {
   var $logo = $('#logo');
   var $numbers = $('.numberminigame-numbers-number');
   var $guessthebox = $('#guessthebox');
+  var $countdown = $('#install-countdown');
   
   $spinner.hide();
   $numberMinigame.hide();
   $numberMinigameNumbers.hide();
   $guessthebox.hide();
+  $countdown.hide();
 
   function display(bool) {
     if (bool) {
@@ -52,6 +54,16 @@ display(false)
   // random number between 1 and 3
   var wrong = 0;
 
+  // when countdown is visible, start the countdown
+  if ($countdown.is(':visible')) {
+    // set .install-countdown-bar-progress to 0 and animate it to 100% in 2 minutes
+    $('.install-countdown-bar-progress').css('width', '0%').animate({
+      width: '100%'
+    }, 120000, function() {
+      console.log('done');
+    });
+  }
+
   $(document).on('click', '.guesstheboxs-box', function() {
     var id = $(this).attr('id');
     var box = parseInt(id.substr(-1));
@@ -66,14 +78,23 @@ display(false)
           var completedAudio = new Audio('assets/completed.mp3');
           completedAudio.play();
           $guessthebox.fadeOut('slow');
-          $spinner.fadeIn('slow');
+          //$spinner.fadeIn('slow');
+          $countdown.fadeIn('slow');
           setTimeout(function() {
-            $spinner.fadeOut('slow');
-            var audioZip = new Audio('assets/zipsound.mp3');
-            audioZip.play();
-            correctBox = Math.floor(Math.random() * 3) + 1;
-            $('.guesstheboxs-box').css('background-color', '#5e7194');
-            $.post('https://bankrobbery/complete', JSON.stringify({}));
+            $('#install-countdown-bar-progress').css('width', '0%').animate({
+              width: '100%'
+            }, 120000, function() {
+              $countdown.fadeOut('slow');
+              $spinner.fadeIn('slow');
+              setTimeout(function() {
+                $spinner.fadeOut('slow');
+                var audioZip = new Audio('assets/zipsound.mp3');
+                audioZip.play();
+                correctBox = Math.floor(Math.random() * 3) + 1;
+                $('.guesstheboxs-box').css('background-color', '#5e7194');
+                $.post('https://bankrobbery/complete', JSON.stringify({}));
+              }, 1000);
+            });
           }, 1000);
         }, 1500);
       }
